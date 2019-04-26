@@ -1,0 +1,24 @@
+{
+  "name": "react-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "start:dev": "pm2 restart ecosystem.config.js --only react-server_dev",
+    "start:test": "pm2 restart ecosystem.config.js --only react-server_test",
+    "start:sim": "pm2 restart ecosystem.config.js --only react-server_sim",
+    "start:prod": "pm2 restart ecosystem.config.js --only react-server_prod",
+    "stop:dev": "pm2 stop react-server_dev && pm2 delete react-server_dev",
+    "stop:test": "pm2 stop react-server_test && pm2 delete react-server_test",
+    "stop:sim": "pm2 stop react-server_sim && pm2 delete react-server_sim",
+    "stop:prod": "pm2 stop react-server_prod && pm2 delete react-server_prod"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0"
+  }
+}
